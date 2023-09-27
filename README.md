@@ -1,1 +1,1 @@
-# React + Vite + Tilewind
+# React + Vite + Tailwind CSS
