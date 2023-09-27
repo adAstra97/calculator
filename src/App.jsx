@@ -9,13 +9,15 @@ function App() {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(reducer, {});
 
   return (
-    <div className='grid grid-cols-repeat-4-6rem grid-rows-6-rows mt-8 justify-center'>
-      <div className='col-span-full bg-black bg-opacity-75 flex flex-col items-end justify-between p-4 break-all'>
-        <div className=' text-pink-100 text-opacity-75 text-2xl'>{formatOperand(previousOperand)} {operation}</div>
-        <div className='text-white text-4xl'>{formatOperand(currentOperand)}</div>
-      </div>
+    <div className="inline-block border-8 rounded-2xl">
+      <div className='grid grid-cols-repeat-4-6rem grid-rows-6-rows'>
+        <div className='col-span-full bg-black bg-opacity-70 flex flex-col items-end justify-between rounded-t-md p-4 break-all'>
+          <div className=' text-pink-100 text-opacity-75 text-2xl'>{formatOperand(previousOperand)} {operation}</div>
+          <div className='text-white text-4xl'>{formatOperand(currentOperand)}</div>
+        </div>
 
-      <Keyboard dispatch={dispatch}/>
+        <Keyboard dispatch={dispatch}/>
+      </div>
     </div>
   )
 }
